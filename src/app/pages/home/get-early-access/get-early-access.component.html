@@ -1,0 +1,40 @@
+<!-- get early access -->
+<article class="py-24 container-large bg-footer/70 lg:py-32">
+  <div class="container grid gap-10 text-center text-inverted place-items-center lg:grid-cols-2 lg:place-items-start">
+    <div>
+      <h1 class="text-2xl font-bold font-heading lg:text-left lg:text-4xl">Get early access today</h1>
+      <p class="mt-4 font-medium lg:text-left lg:text-lg">It only takes a munute to sign up and our fee starter tier is
+        extremely
+        generous. If
+        you
+        have any questions, our
+        support team would be happy to help you.</p>
+    </div>
+
+    <!-- email form -->
+    <div class="w-full">
+      <form (ngSubmit)="onSubmit($event)" [formGroup]="form"
+        class="flex flex-col items-center gap-8 sm:flex-row sm:items-start lg:h-12 lg:flex-col lg:items-start lg:w-full">
+
+        <!-- email input -->
+        <div class="w-full sm:flex-grow sm:w-auto lg:w-full 2xl:max-w-lg">
+          <input formControlName="email" placeholder="email@example.com" class="w-full placeholder-muted" type="email">
+
+          <!-- errors -->
+          <p class="self-start text-left" *ngIf="email.touched && email.errors">Pleace check your email</p>
+          <!-- end errors -->
+        </div>
+        <!-- end email input -->
+
+        <!-- button submit -->
+        <div class="w-full sm:w-auto ">
+          <button class="w-full btn btn-primary sm:px-4 lg:px-10">Get started for free</button>
+        </div>
+        <!-- end button submit -->
+      </form>
+    </div>
+    <!-- end email form -->
+  </div>
+
+</article>
+<!-- end get early access -->

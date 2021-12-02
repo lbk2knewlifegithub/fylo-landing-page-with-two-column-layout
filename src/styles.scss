@@ -1,1 +1,77 @@
 /* You can add global styles to this file, and also import other style files */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@layer base {
+  :root {
+    // colors
+    --white: 0, 0%, 100%;
+
+    // primary
+    --very-dark-blue: 243, 87%, 12%;
+    --desaturated-blue: 238, 22%, 44%;
+    // accent
+    --bright-blue: 224, 93%, 58%;
+    --moderate-cyan: 170, 45%, 43%;
+    // neutral
+    --light-grayish-blue: 240, 75%, 98%;
+    --light-gray: 0, 0%, 75%;
+
+    ////////////////////
+    // text colors /////
+    ////////////////////
+    --text-fill: var(--very-dark-blue);
+    --text-muted: var(--desaturated-blue);
+    --text-inverted: var(--white);
+    --text-success: var(--moderate-cyan);
+
+    /////////////////////////////
+    // background colors /////////
+    /////////////////////////////
+    --bg-fill: var(--white);
+    --bg-muted: var(--light-grayish-blue);
+    --bg-primary: var(--bright-blue);
+    --bg-early: var(--desaturated-blue);
+    --bg-footer: var(--very-dark-blue);
+
+    /////////////////////////////
+    // border colors /////////////
+    /////////////////////////////
+    --border-fill: var(--very-dark-blue);
+    --border-success: var(--moderate-cyan);
+    --border-muted: var(--desaturated-blue);
+  }
+
+  //make default form look nice
+  [type="email"] {
+    @apply w-full border-fill py-3 rounded shadow-sm pl-4 text-fill;
+  }
+}
+
+input.ng-invalid.ng-touched {
+  // @apply border-2 border-danger;
+}
+
+@layer components {
+  .filter-white {
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(112deg)
+      brightness(103%) contrast(101%);
+  }
+
+  //CUSTOM APPLY HERE
+  .btn {
+    @apply inline-block py-3 font-bold rounded shadow-lg;
+  }
+
+  .btn-primary {
+    @apply text-inverted bg-primary;
+  }
+
+  .btn-success {
+  }
+  .container-large {
+    max-width: 1536px;
+    margin: 0 auto;
+  }
+}
