@@ -61,7 +61,7 @@ input.ng-invalid.ng-touched {
 
   //CUSTOM APPLY HERE
   .btn {
-    @apply inline-block py-3 font-bold rounded shadow-lg;
+    @apply inline-block py-3 font-bold rounded shadow-lg px-5;
   }
 
   .btn-primary {

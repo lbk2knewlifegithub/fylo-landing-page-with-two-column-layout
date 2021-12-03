@@ -22,13 +22,10 @@
 
     <!-- email form -->
     <section class="mt-10">
-      <form (ngSubmit)="onSubmit($event)" [formGroup]="form"
-        class="flex flex-col items-center gap-6 sm:flex-row sm:items-start">
-
+      <form (ngSubmit)="onSubmit($event)" [formGroup]="form" class="flex flex-col gap-6 sm:flex-row sm:items-start">
         <!-- email input -->
-        <div class="w-full sm:flex-grow">
-          <input formControlName="email" placeholder="Email your email..." class="w-full placeholder-muted"
-            type="email">
+        <div class="sm:flex-grow">
+          <input formControlName="email" placeholder="Email your email..." class="placeholder-muted" type="email">
           <!-- errors -->
           <p class="text-left" *ngIf="email.touched && email.errors">Pleace check your email</p>
           <!-- end errors -->
@@ -36,10 +33,10 @@
         <!-- end email input -->
 
         <!-- submit button -->
-        <div class="w-full sm:w-auto ">
-          <button class="w-full btn btn-primary sm:px-10 lg:px-6">Get started</button>
+        <div>
+          <button class="w-full h-full btn btn-primary sm:px-10 lg:px-4 xl:px-10">Get started</button>
+          <!-- end submit button -->
         </div>
-        <!-- end submit button -->
       </form>
 
       <!-- end email form -->
